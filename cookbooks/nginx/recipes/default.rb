@@ -6,14 +6,11 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-	service 'httpd' do 
-	 action [ :disable, :stop ]
-	end
 
   package 'nginx' do 
-	action :install
+	action :remove
 	end
 
 		service 'nginx' do
-		action [ :enable, :start ]
+		action [ :disable, :stop ]
 		end
