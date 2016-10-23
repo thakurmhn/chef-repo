@@ -10,7 +10,9 @@
   package 'nginx' do 
 	action :remove
 	end
-
+package "nginx-filesystem" do
+	action :remove
+	end
 		service 'nginx' do
-		action [ :disable, :stop ]
+		action [:disable, :stop]
 		end
