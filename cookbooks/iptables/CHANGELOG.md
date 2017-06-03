@@ -1,6 +1,28 @@
 # iptables Cookbook CHANGELOG
 This file is used to list changes made in each version of the iptables cookbook.
 
+## 4.2.0 (2017-04-14)
+
+- [GH-69] - Clearing out iptables rule files on RHEL with the iptables::disabled recipe
+
+## 4.1.0 (2017-04-11)
+
+- specify optional table property for use with lines
+
+## 4.0.1 (2017-03-29)
+- Update metadata to require Chef 12.10+ due to use of with_run_context 
+
+## 4.0.0 (2017-02-27)
+
+- Remove EOL platforms from testing
+- Require Chef 12.5 and remove compat_resource dependency
+
+## 3.1.0 (2017-01-16)
+
+- Update readme to include new attribute
+- Check subcmd exit codes in rebuild-iptables script
+- fixed iptables disabled recipe to flush iptables after disabling the service
+
 ## 3.0.1 (2016-10-10)
 - Fix rules resource so rebuild-iptables only runs once
 - Add tests for nested resources
