@@ -10,18 +10,19 @@
 
 #_ipaddr = #{node['ipaddress']}
 
-case node[:ipaddress] 
+case node["ipaddress"] 
 
-when '^10.0'
+when /(^10.0)/
 
-node.default['location']['datacenter'] = 'NED'
+#node.default['location']['dc'] = 'NED'
+node.default['location'] = {"dc" => "NED", "network" => "core"}
 
-when '^10.2'
+when /(^10.2)/
 
-node.default['location']['datacenter'] = 'SED'
+node.default['location']['dc'] = 'SED'
 
 else
 
-node.default['location']['datacenter'] = 'unknown'
+node.default['location']['dc'] = 'unknown'
 
 end
